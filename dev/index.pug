@@ -4,4 +4,14 @@ html
   head
     include chunks/head
   body
-    
+    .wrappper
+      each item in articleTitle
+        if index = 1
+          .article
+           include chunks/article
+        //- else if index+1 == m
+        //-   .article.article-m-orange
+        //-     include chunks/article
+        //- else if index+1 == z
+        //-   .article.article-l-orange
+        //-     include chunks/article

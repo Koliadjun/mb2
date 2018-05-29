@@ -2,3 +2,39 @@
 @import 'mixin';
 @import 'base';
 @import 'grid';
+.article{
+  position: relative;
+  margin-bottom: $opfsets;
+  margin-left: $opfsets/2;
+  margin-right: $opfsets/2;
+  text-transform: uppercase;
+  &__img{
+    max-width: 100%;
+  }
+  &__title{
+    height: 53px;
+    background: $orange; 
+    & a{
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    padding: 15px 100px 15px 23px;
+    text-decoration: none;
+    }
+  }
+}
+.article-m-orange{
+  &__title{
+    background: $midle-orange;
+  }
+}
+.article-l-orange{
+  &__title{
+    background: $light-orange;
+  }
+}
+.article-gray{
+  &__title{
+    background: $gray;
+  }
+}
