@@ -1,0 +1,13 @@
+.wrapper{
+  max-width: 960px;
+  padding: 0 $opfsets;
+  margin: 0 auto;
+}
+.row{
+  margin: 0 ($opfsets*-1);
+}
+.clearfix:after{
+  content: '';
+  clear: both;
+  display: block;
+}
