@@ -3,38 +3,113 @@
 @import 'base';
 @import 'grid';
 .article{
+  display: block;
+  height: 270px;
+  text-decoration: none;
   position: relative;
   margin-bottom: $opfsets;
-  margin-left: $opfsets/2;
-  margin-right: $opfsets/2;
   text-transform: uppercase;
   &__img{
-    max-width: 100%;
+    position: relative;
+    height: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    img{
+      max-width: 100%;
+      max-height: 100%;
+      transition: .5s all ease;
+      transform: scale(1);
+      filter: grayscale(100%);
+    }
+    &:hover{
+      img{
+        transform: scale(1.2);
+        filter: grayscale(0);
+      }
+    }
   }
   &__title{
-    height: 53px;
+    height: 56px;
     background: $orange; 
-    & a{
-    display: block;
     color: #fff;
     font-size: 14px;
-    padding: 15px 100px 15px 23px;
-    text-decoration: none;
-    }
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
   }
 }
 .article-m-orange{
-  &__title{
+  .article__title{
     background: $midle-orange;
   }
 }
 .article-l-orange{
-  &__title{
+  .article__title{
     background: $light-orange;
   }
 }
 .article-gray{
-  &__title{
+  .article__img{
+    height: 270px;
+    background: #e2e2e2;
+    img{
+      filter: grayscale(0);
+    }
+}
+  .article__title{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background: $gray;
+  }
+}
+.header{
+  background-image: url(../img/header-bg.png);
+  min-height: 165px;
+  &__logo{
+    display: inline-block;
+    a{
+      display: block;
+    }
+  }
+  &__title{
+    display: inline-block;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    margin-left: 25px;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  &__contacts{
+    float: right;
+    margin-top: 55px;
+    a{
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      span{
+        font-size: 30px;
+      }
+    }
+  }
+}
+ul.header__menu{
+  list-style: none;
+  li{
+    background: #e5e5e5;
+    border-left: 1px solid #c6c6c6;
+    display: inline-block;
+    a{
+      display: inline-block;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #434343;
+      font-size: 18px;
+      padding: 25px 20px;
+    }
   }
 }
