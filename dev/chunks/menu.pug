@@ -1,4 +1,9 @@
 ul.header__menu
-  li
-    each item in headerMenu
+  each item in headerMenu
+    li
       a(href="#")=item
+  li.search-box
+    form(action="/action_page.php")
+      input(type="text" placeholder="" name="search")
+      button(type="submit")
+        .search-button

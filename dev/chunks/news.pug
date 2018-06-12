@@ -1,0 +1,8 @@
+ul.news.padding-r-15
+  .section новости
+  each item,index in news
+    li
+      a(href="#").news__date=item['newsDate'] 
+        span=item['newsYear']
+      a(href="#").news__text=item['newsText']+' '
+        i.fas.fa-long-arrow-alt-right

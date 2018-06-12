@@ -56,3 +56,11 @@
     width: 25%;
   }
 }
+.col-desktop-3-4{
+  padding: 0 $opfsets/2;
+   @include breakpoint(lg)
+  {
+    float: left;
+    width: 75%;
+  }
+}

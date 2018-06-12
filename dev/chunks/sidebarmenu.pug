@@ -1,0 +1,12 @@
+ul.sidebarmenu.padding-r-15
+  .section ПРОИЗВОДСТВО
+  each item,index in sideMenu
+    li(class=(index+1) % 2 ==0 ? 'bg-gray' : '') 
+      a(href="#")=item
+      .sidebarmenu__opener(data-tabtrigger=index, data-group='sideBarMenu', data-noheight, data-toggle)
+      ul(data-tab=index, data-group='sideBarMenu')
+        li:a(href="#") some sub menu
+        li:a(href="#") some sub menu
+        li:a(href="#") some sub menu
+        li:a(href="#") some sub menu
+
